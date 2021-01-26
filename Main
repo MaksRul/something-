@@ -1,0 +1,22 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> children = Arrays.asList(" Girl","Boy","Girl","Boy","Girl","Boy","Girl","Boy","Girl","Boy");
+        int a = 0;
+        Random random = new Random();
+        int randomIndex = random.nextInt(children.size());
+        String randomChild = children.get(randomIndex);
+        if (randomChild.charAt(0) == 'G') {
+            a = 1;
+        }
+        if( a==1) {
+            randomIndex = random.nextInt(children.size());
+            randomChild = children.get(randomIndex);
+        }
+        System.out.println( randomChild);
+        }
+    }
